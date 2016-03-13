@@ -62,7 +62,7 @@ router.post('/signup', isLoggedIn, function (req, res) {
 
                 newUser.save(function(err, user) {
                     var nodemailer = require('nodemailer');
-                    var transporter = nodemailer.createTransport('smtps://96hudson%40gmail.com:1hudson2@smtp.gmail.com');
+                    var transporter = nodemailer.createTransport('smtps://96hudson%40gmail.com:<placeholder>@smtp.gmail.com');
                     var mailOptions = {
                         from: '"Hudson Hughes" <96hudson@gmail.com>', // sender address
                         to: email, // list of receivers
