@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="73f37f89-0982-4f2d-86e2-fae9e83c13fe" name="AWS" url="http://ec2-52-26-249-247.us-west-2.compute.amazonaws.com">
+        <fileTransfer host="ec2-52-26-249-247.us-west-2.compute.amazonaws.com" port="22" privateKey="$USER_HOME$/Desktop/Hudson.pem" rootFolder="/home/bitnami" accessType="SFTP" username="bitnami" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

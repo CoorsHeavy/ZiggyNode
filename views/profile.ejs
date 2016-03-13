@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ziggy's App</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: darkblue;
+        }
+        h1, p {
+            font: 28px "Times New Roman";
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+<h1>Ziggy's App</h1>
+<p>Your Profile</p>
+<p>Current Settings</p>
+<img src=<%- JSON.stringify(image) %> style="width:200px;height:200px;">
+<p>Email: <%- JSON.stringify(email) %></p>
+<p>First Name: <%- JSON.stringify(first) %></p>
+<p>Last Name: <%- JSON.stringify(last) %></p>
+<div class="col-md-4">
+    <form action="editprofile" method="post">
+        First name: <input type="text" name="fname"><br>
+        Last name: <input type="text" name="lname"><br>
+        <input type="submit" value="Submit Name">
+    </form>
+    <br>
+    <form action="fileupload" enctype="multipart/form-data" method="post">
+        Upload JPG image: <input type="file" name="pic" id="pic" accept="image/gif,image/jpeg"><br>
+        <input type="submit" value="Submit Image">
+    </form>
+</div>
+<br>
+<form action="logout" method="post">
+    <button name="logout" value="Logut">Logout</button>
+</form>
+
+</body>
+</html>
